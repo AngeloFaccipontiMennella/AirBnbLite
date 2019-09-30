@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>{{ property.name }}</h1>
+    <div class="content-section">
+            <img src="{{property.image_url}}" alt="{{property.name}}" style="width:600px;height:400px;">
+            <br>{{ property.location }}
+            <br>{{ property.bedrooms}} bedrooms
+            <br>{{ property.price }} per night
+            <br>{{ property.description }}
+    </div>
+    <form method="GET" action="/rentProperty">
+    <input type="hidden" name="property_id" value="{{ property._id }}">
+    <!-- <a href="{{ url_for('rentproperty')}} "> -->
+        <input type="submit" value="Rent this House!">
+    </form>
+
+{% endblock %}
+
+

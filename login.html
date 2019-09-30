@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="content-section">
+        <div class="bg"></div>
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Log In</legend>
+                <div class="form-group">
+                    {{ form.email.label(class="form-control-label") }}
+                    {{ form.email(class="form-control form-control-lg") }}
+                </div>
+                <div class="form-group">
+                    {{ form.password.label(class="form-control-label") }}
+                    {{ form.password(class="form-control form-control-lg") }}
+                </div>
+                <div class="form-check">
+                    {{ form.remember(class="form-check-input") }}
+                    {{ form.remember.label(class="form-check-label") }}
+                </div>
+                <div class="form-group">
+                    {{ form.submit(class="btn btn-outline-info") }}
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div class="border-top pt-3">
+            <small class="text-muted">
+                New to AirBnbLite? Click <a href="{{ url_for('signup')}} ">here</a> to sign up!
+            </small>
+    </div>
+{% endblock %}

@@ -1,0 +1,23 @@
+body{
+    background: #fafafa;
+    color: #333333;
+    margin-top: 5rem;
+}
+
+.content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+
+  .bg {
+    background-image: url("https://www.lenoxhotel.com/wp-content/uploads/2017/06/Boston-Skyline.jpg");
+  
+    height: 100%;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

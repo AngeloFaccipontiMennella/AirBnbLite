@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1> All Properties </h1>
+
+        {% for property in properties %}
+        <div class="content-section">
+
+            <div class="property">
+                <form method="GET" action="/propertyPage">
+                    <!--property_name = {{ property.name }}-->
+                    <input type="hidden" name="property_id" value="{{ property._id }}">
+                    <h3><input type="submit" name="getOneProperty" value="{{ property.name }}"></h3>
+                    <!--<h3><a href="{{ url_for('propertypage')}} ">{{ property.name }}</a></h3>-->
+                </form>
+                <img src="{{property.image_url}}" alt="{{property.name}}" style="width:250px;height:150px;">
+                <br>{{ property.location }}
+                <br>{{ property.bedrooms}} bedrooms
+                <br>{{ property.price }} per night
+            </div>
+        </div>
+        {% endfor %}
+{% endblock %}
+    
